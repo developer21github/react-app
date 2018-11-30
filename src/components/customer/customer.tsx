@@ -1,9 +1,12 @@
 import * as React from 'react'
 import {FormGroup, Input, Button, FormText, Label, Row, Col} from 'reactstrap'
 import CustomerM from '../../models/customer'
+import  {CustomerArrayProps as CustomerArrayProps} from "./customerIndex";
 
 interface CustomerProps {
     customer?: CustomerM
+    handleSubmit: (value: any) => void
+    CustomerArrayProps:CustomerArrayProps
 }
 
 export default class Customer extends React.Component<CustomerProps> {
@@ -21,7 +24,7 @@ export default class Customer extends React.Component<CustomerProps> {
     handleSubmit = (e: any) => {
         e.preventDefault();
         window.console.log(this.state);
-      //  this.props.handleSubmit(this.state)
+        this.props.handleSubmit(this.state)
         return this.state;
     }
 

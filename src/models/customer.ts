@@ -1,4 +1,4 @@
-export default interface Customer {
+export default interface CustomerM {
     name: string,
     email: string,
     state: string,
